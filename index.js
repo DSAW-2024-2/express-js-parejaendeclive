@@ -16,3 +16,10 @@ const student2 = {
     "email": "andreasorol@unisabana.edu.co",
     "id": "0000298246"
 };
+
+
+// Iniciar el servidor
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});
+
