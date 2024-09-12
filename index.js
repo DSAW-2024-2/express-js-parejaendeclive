@@ -9,3 +9,10 @@ const student1 = {
     email: "samuelroul@unisabana.edu.co",
     id: "0000296433"
 };
+
+const student2 = {
+    name: "Andrea Julieth",
+    lastName: "Sosa Rodriguez",
+    email: "andreasorol@unisabana.edu.co",
+    id: ""
+};
