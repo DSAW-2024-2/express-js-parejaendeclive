@@ -21,7 +21,7 @@ let students_data= {
 //endpoint_function
 app.get('/user-info/:id', (req, res) => {
     const id= req.params.id;
-    let selected_student=students_data[id];
+    const selected_student=students_data[id];
     
         if(selected_student){
             //call validation function
@@ -29,7 +29,7 @@ app.get('/user-info/:id', (req, res) => {
             
         }
         else{
-            res.status(404).json({ error: "Estudiante no encontrado" });
+            res.status(404).json({ error: "student not found" });
         }
     
     
