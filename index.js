@@ -17,14 +17,14 @@ let students_data = {
     2: {
         name: "Andrea Julieth",
         lastName: "Sosa Rodriguez",
-        email: "andreasorol@unisabana.edu.co",
+        email: "andreasosro@unisabana.edu.co",
         id: "0000298246"
     }
 };
 
 // Endpoint principal para verificar que el servidor está funcionando
 app.get('/', (req, res) => {
-    res.json({ message: "El servidor está funcionando correctamente. Añade /user-info para obtener la información de los estudiantes." });
+    res.json({ message: "You are in the server, add /user-info/ to know about data students" });
 });
 
 // Endpoint para obtener la información de un estudiante según el ID
