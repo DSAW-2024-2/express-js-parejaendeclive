@@ -39,9 +39,3 @@ app.listen(port, () => {
     console.log(`server listen in http://localhost:${port}`);
 });
 
-//validation
-
-
-
-
-
