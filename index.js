@@ -3,10 +3,10 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Habilitar CORS
+// enable CORS
 app.use(cors());
 
-// Datos de los estudiantes
+// Data students
 let students_data = {
     1: {
         name: "Samuel Andres",
@@ -22,17 +22,17 @@ let students_data = {
     }
 };
 
-// Endpoint principal para verificar que el servidor está funcionando
+// Endpoint get server default
 app.get('/', (req, res) => {
-    res.json({ message: "El servidor está funcionando correctamente. Añade /user-info para obtener la información de los estudiantes." });
+    res.json({ message: "You are in the server. add /user-info/id for more information about a student" });
 });
 
-// Endpoint para obtener la información de un estudiante según el ID
+// Endpoint get students information
 app.get('/user-info/:id', (req, res) => {
     try {
         const id = req.params.id;
 
-        // Verificar que el ID sea un número
+        // Validations
         if (!/^\d+$/.test(id)) {
             return res.status(400).json({ error: "Invalid ID format. ID must be a number." });
         }
@@ -45,12 +45,12 @@ app.get('/user-info/:id', (req, res) => {
             res.status(404).json({ error: "Student not found" });
         }
     } catch (error) {c
-        // Manejo de errores del servidor
+        // server validations
         res.status(500).json({ error: "Internal server error" });
     }
 });
 
-// Iniciar el servidor
+// listen server-port
 app.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`);
 });
