@@ -17,14 +17,14 @@ let students_data = {
     2: {
         name: "Andrea Julieth",
         lastName: "Sosa Rodriguez",
-        email: "andreasosro@unisabana.edu.co",
+        email: "andreasoro@unisabana.edu.co",
         id: "0000298246"
     }
 };
 
 // Endpoint principal para verificar que el servidor está funcionando
 app.get('/', (req, res) => {
-    res.json({ message: "You are in the server, add /user-info/ to know about data students" });
+    res.json({ message: "El servidor está funcionando correctamente. Añade /user-info para obtener la información de los estudiantes." });
 });
 
 // Endpoint para obtener la información de un estudiante según el ID
@@ -44,7 +44,7 @@ app.get('/user-info/:id', (req, res) => {
         } else {
             res.status(404).json({ error: "Student not found" });
         }
-    } catch (error) {
+    } catch (error) {c
         // Manejo de errores del servidor
         res.status(500).json({ error: "Internal server error" });
     }
