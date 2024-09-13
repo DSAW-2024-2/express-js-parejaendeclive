@@ -17,7 +17,7 @@ let students_data = {
     2: {
         name: "Andrea Julieth",
         lastName: "Sosa Rodriguez",
-        email: "andreasoro@unisabana.edu.co",
+        email: "andreasosro@unisabana.edu.co",
         id: "0000298246"
     }
 };
